@@ -66,7 +66,9 @@ function generatePlugins(params, watch) {
 
   plugins.push(
     new webpack.DefinePlugin({
-      'process.env': JSON.stringify(env)
+      'process.env': {
+        'NODE_ENV': JSON.stringify(env)
+      }
     })
   );
 

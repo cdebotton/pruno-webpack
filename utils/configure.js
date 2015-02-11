@@ -62,13 +62,13 @@ function generatePlugins(params, watch) {
     );
   }
 
-  if (! watch) {
-    plugins.push(
-      new webpack.DefinePlugin({
-        'process.env': { 'NODE_ENV': 'production' }
-      })
-    );
-  }
+  var env = !watch ? 'production' : 'development';
+
+  plugins.push(
+    new webpack.DefinePlugin({
+      'process.env': JSON.stringify(env)
+    })
+  );
 
   if (params.uglify) {
     plugins.push(

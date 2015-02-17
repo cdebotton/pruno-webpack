@@ -93,7 +93,7 @@ function generateJSLoaders(params, watch) {
   }
 
   if (params.es6 || params.react || params.harmony) {
-    loaders.push('6to5');
+    loaders.push('babel');
   }
 
   return loaders;

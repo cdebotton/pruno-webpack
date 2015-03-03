@@ -42,7 +42,7 @@ WebpackTask.prototype.generateWatcher = function(gulp, params, callback) {
 
     return new WebpackDevServer(webpack(config), {
       publicPath: config.output.publicPath,
-      hot: true,
+      hot: params['hot-load'],
       inline: true,
       noInfo: true,
       inlineSourceMaps: true

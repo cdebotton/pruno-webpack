@@ -16,11 +16,19 @@ function configure(params, watch) {
   var devtool = params.devtool ? '#' + params.devtool : false;
   var context = params.context || pwd();
   var port = params.devport || 9000;
+
   var bundle = watch ? [
-    'webpack-dev-server/client?http://localhost:' + port + '/',
-    'webpack/hot/only-dev-server',
-    entry
+    'webpack-dev-server/client?http://localhost:' + port + '/'
   ] : entry;
+
+  if (watch && params['hot-load']) {
+    bundle.push('webpack/hot/only-dev-server');
+  }
+
+  if (watch) {
+    bundle.push(entry);
+  }
+
   var jsLoaders = generateJSLoaders(params, watch);
 
   return {

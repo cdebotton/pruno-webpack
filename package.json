@@ -29,7 +29,7 @@
     "gulp-util": "^3.0.3",
     "object-assign": "^2.0.0",
     "shelljs": "^0.3.0",
-    "webpack": "^1.5.3",
+    "webpack": "^1.5.3"
   },
   "peerDependencies": {
     "babel-loader": "^4.0.0",

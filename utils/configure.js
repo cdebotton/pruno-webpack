@@ -103,6 +103,9 @@ function generateJSLoaders(params, watch) {
   if (params.es6 || params.react || params.harmony) {
     loaders.push('babel');
   }
+  if (params.es7) {
+    loaders.push('babel?experimental');
+  }
 
   return loaders;
 }

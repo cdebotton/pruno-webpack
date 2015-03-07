@@ -41,7 +41,7 @@ WebpackTask.prototype.enqueue = function(gulp, params, callback) {
 
 WebpackTask.prototype.generateWatcher = function(gulp, params, callback) {
   return function() {
-  var config = configure(params);
+    var config = configure(params, true);
 
     return new WebpackDevServer(webpack(config), {
       publicPath: config.output.publicPath,

@@ -54,7 +54,8 @@ function configure(params, watch) {
 
     module: {
       loaders: [
-        { test: /\.js$/, loaders: jsLoaders, exclude: /node_modules/ }
+        { test: /\.js$/, loaders: jsLoaders, exclude: /node_modules/ },
+        { test: /\.json$/, loader: "json" }
       ]
     }
   };

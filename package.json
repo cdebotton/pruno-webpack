@@ -1,6 +1,6 @@
 {
   "name": "pruno-webpack",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Build your pruno application with Webpack. ",
   "main": "index.js",
   "scripts": {

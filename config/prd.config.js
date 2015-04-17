@@ -8,13 +8,15 @@ import notifyStats from "../utils/notify-stats";
 
 
 export default (params) => {
+  let dist = path.join(process.cwd(), params.dist);
+
   return {
     devtool: false,
     entry: {
       "bundle": params.entry
     },
     output: {
-      path: params.dist,
+      path: dist,
       filename: "[name]-[chunkhash].js",
       chunkFilename: "[name]-[chunkhash].js",
       publicPath: "/"

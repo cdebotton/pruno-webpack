@@ -9,6 +9,8 @@ export default (params) => {
   const WEBPACK_HOST = "localhost";
   const WEBPACK_PORT = parseInt(process.env.PORT) + 1 || 3001;
 
+  let dist = path.join(process.cwd(), params.dist);
+
   return {
     devtool: "eval",
     entry: {
@@ -19,7 +21,7 @@ export default (params) => {
       ]
     },
     output: {
-      path: params.dist,
+      path: dist,
       filename: "[name]-[chunkhash].js",
       chunkFilname: "[name-[chunkhash].js",
       publicPath: `http://${WEBPACK_HOST}:${WEBPACK_PORT}/`

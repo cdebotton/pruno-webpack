@@ -39,6 +39,12 @@
     "webpack": "^1.8.5",
     "webpack-dev-server": "^1.8.0"
   },
+  "peerDependencies": {
+    "babel-loader": "^5.0.0",
+    "eslint-loader": "^0.10.0",
+    "webpack-dev-server": "^1.8.0",
+    "json-loader": "^0.5.1"
+    },
   "devDependencies": {
     "gulp": "^3.8.11",
     "gulp-babel": "^5.1.0"

@@ -94,6 +94,7 @@ var WebpackTask = (function () {
     value: function getDefaults() {
       return {
         entry: "::src/index.js",
+        stats: "::src/webpack-stats.json",
         dist: "::dist",
         port: parseInt(process.env.PORT) + 1 || 3001,
         host: process.env.HOST || "localhost"

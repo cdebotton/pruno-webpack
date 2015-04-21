@@ -15,7 +15,7 @@ var _path = require("path");
 var _path2 = _interopRequireWildcard(_path);
 
 exports["default"] = function (params) {
-  var FILEPATH = _path2["default"].resolve(params.dist + "/webpack-stats.json");
+  var FILEPATH = _path2["default"].resolve(params.stats + "/webpack-stats.json");
 
   return function (stats) {
     var publicPath = this.options.output.publicPath;
